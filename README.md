@@ -63,19 +63,22 @@ http://127.0.0.1:5000
 Passwords are securely stored using bcrypt hashing.
 
 SQL queries use parameterized statements.
+
 User input is validated on both client and server sides.
+
 Flask sessions are used for authentication.
+
 Optional TOTP-based 2FA provides additional security.
 
 ## **Requirements**
- User Registration
- User Login
- Hashed Passwords
- Input Validation
- SQL Injection Protection
- Session Management
- Logout
- Optional 2FA
+ User Registration,
+ User Login,
+ Hashed Passwords,
+ Input Validation,
+ SQL Injection Protection,
+ Session Management,
+ Logout and
+ Optional 2FA.
 
 
 
