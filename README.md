@@ -61,6 +61,7 @@ http://127.0.0.1:5000
 ```
 ## **Security**
 Passwords are securely stored using bcrypt hashing.
+
 SQL queries use parameterized statements.
 User input is validated on both client and server sides.
 Flask sessions are used for authentication.
