@@ -2,7 +2,7 @@
 
 A secure web-based authentication system built using Python Flask, HTML, CSS, JavaScript, and SQLite.
 
-✨ Features
+*Features*
 
 User Registration
 
@@ -20,7 +20,7 @@ Optional Two-Factor Authentication (2FA)
 
 Responsive User Interface
 
-🛠️ Technologies
+*Technologies*
 
 Python & Flask
 
@@ -34,9 +34,9 @@ bcrypt
 
 PyOTP
 
-Node.js and npm are not required.
 
-📂 Project Structure
+
+*Project Structure*
 
 secure_login_system/
 ├── app.py
@@ -54,7 +54,7 @@ secure_login_system/
     ├── style.css
     └── script.js
 
-🚀 How to Run
+*How to Run*
 
 Install dependencies:
 
@@ -68,7 +68,7 @@ Open in your browser:
 
 http://127.0.0.1:5000
 
-🔒 Security
+*Security*
 
 Passwords are stored using bcrypt hashing.
 
@@ -80,7 +80,7 @@ Flask sessions protect authenticated pages.
 
 Optional TOTP-based 2FA provides an additional security layer.
 
-📋 Requirements
+*Requirements*
 
 User Registration
 
@@ -98,11 +98,6 @@ Logout
 
 Optional 2FA
 
-👨‍💻 Author
-
-Your Name
-
-Computer Science Engineering Student
 
 📄 License
 
