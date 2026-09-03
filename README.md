@@ -2,7 +2,7 @@
 
 A secure web-based authentication system built using **Python Flask, HTML, CSS, JavaScript, and SQLite**.
 
- ## **  Features**
+ ## **   Features**
 - User Registration
 - Secure Login & Logout
 - Bcrypt Password Hashing
