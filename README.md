@@ -22,7 +22,6 @@ A secure web-based authentication system built using **Python Flask, HTML, CSS, 
 - bcrypt
 - PyOTP
 
-**Node.js and npm are not required.**
 
 ## **📂 Project Structure**
 ```text
