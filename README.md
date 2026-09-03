@@ -48,17 +48,17 @@ secure-login-system/
 🚀 How to Run
 
 1. Install dependencies
-
+```text
 pip install -r requirements.txt
-
+```
 2. Run the application
-
+```text
 python app.py
-
+```
 3. Open in browser
-
+```text
 http://127.0.0.1:5000
-
+```
 🔒 Security
 Passwords are securely stored using bcrypt hashing.
 SQL queries use parameterized statements.
@@ -78,7 +78,4 @@ Optional TOTP-based 2FA provides additional security.
 📄 License
 
 This project is developed for educational and academic purposes.
-
-
-**Important:** Copy everything from `# **🔐 Secure Login System**` to the end and paste it directly into your GitHub `README.md`. The project structure will appear correctly as a folder tree.
 
