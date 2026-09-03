@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="hero">
+
+    <div>
+
+        <div class="security-icon">
+            🔐
+        </div>
+
+        <h1>
+            Secure Login System
+        </h1>
+
+        <p>
+            A secure web application with password hashing,
+            input validation, session management and optional
+            Two-Factor Authentication.
+        </p>
+
+        <div class="buttons">
+
+            <a href="{{ url_for('login') }}"
+               class="btn">
+                Login
+            </a>
+
+            <a href="{{ url_for('register') }}"
+               class="btn secondary">
+                Create Account
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="features">
+
+    <div class="feature-card">
+
+        <h3>🔒 Password Hashing</h3>
+
+        <p>
+            Passwords are securely hashed using bcrypt
+            before being stored in the database.
+        </p>
+
+    </div>
+
+
+    <div class="feature-card">
+
+        <h3>🛡️ SQL Injection Protection</h3>
+
+        <p>
+            Parameterized SQL queries are used to prevent
+            malicious SQL input.
+        </p>
+
+    </div>
+
+
+    <div class="feature-card">
+
+        <h3>👤 Session Management</h3>
+
+        <p>
+            Secure sessions are used to maintain login
+            state and provide logout functionality.
+        </p>
+
+    </div>
+
+
+    <div class="feature-card">
+
+        <h3>📱 Optional 2FA</h3>
+
+        <p>
+            Users can enable an additional verification
+            code using an authenticator application.
+        </p>
+
+    </div>
+
+</section>
+
+{% endblock %}

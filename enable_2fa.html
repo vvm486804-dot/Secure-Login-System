@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="auth-card">
+
+    <div class="lock">
+        📱
+    </div>
+
+    <h2>Enable Two-Factor Authentication</h2>
+
+    <p class="subtitle">
+        Use an authenticator application to scan this QR code.
+    </p>
+
+
+    <div class="qr-container">
+
+        <img
+            src="data:image/png;base64,{{ qr_code }}"
+            alt="2FA QR Code"
+        >
+
+    </div>
+
+
+    <p>
+        If you cannot scan the QR code, enter this secret
+        manually into your authenticator application:
+    </p>
+
+
+    <div class="secret">
+        {{ secret }}
+    </div>
+
+
+    <form method="POST">
+
+        <label>
+            Enter 6-digit authentication code
+        </label>
+
+        <input
+            type="text"
+            name="otp"
+            maxlength="6"
+            pattern="[0-9]{6}"
+            placeholder="123456"
+            required
+        >
+
+
+        <button type="submit"
+                class="btn full">
+            Verify & Enable 2FA
+        </button>
+
+    </form>
+
+
+    <p class="bottom-text">
+
+        <a href="{{ url_for('dashboard') }}">
+            Back to Dashboard
+        </a>
+
+    </p>
+
+</div>
+
+{% endblock %}

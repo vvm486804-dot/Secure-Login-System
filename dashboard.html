@@ -1,0 +1,155 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="dashboard">
+
+    <div class="welcome">
+
+        <div>
+
+            <span class="small-title">
+                SECURE DASHBOARD
+            </span>
+
+            <h1>
+                Welcome, {{ user["username"] }} 👋
+            </h1>
+
+            <p>
+                Your account is successfully authenticated.
+            </p>
+
+        </div>
+
+        <a href="{{ url_for('logout') }}"
+           class="btn logout-btn">
+            Logout
+        </a>
+
+    </div>
+
+
+    <div class="profile-card">
+
+        <h2>Account Information</h2>
+
+        <div class="info-row">
+
+            <span>Username</span>
+
+            <strong>
+                {{ user["username"] }}
+            </strong>
+
+        </div>
+
+
+        <div class="info-row">
+
+            <span>Email</span>
+
+            <strong>
+                {{ user["email"] }}
+            </strong>
+
+        </div>
+
+
+        <div class="info-row">
+
+            <span>Password</span>
+
+            <strong>
+                🔒 Hashed with bcrypt
+            </strong>
+
+        </div>
+
+
+        <div class="info-row">
+
+            <span>2FA Status</span>
+
+            {% if user["two_fa_enabled"] %}
+
+                <strong class="enabled">
+                    ✓ Enabled
+                </strong>
+
+            {% else %}
+
+                <strong class="disabled">
+                    Not Enabled
+                </strong>
+
+            {% endif %}
+
+        </div>
+
+    </div>
+
+
+    {% if not user["two_fa_enabled"] %}
+
+    <div class="security-card">
+
+        <h2>Improve Account Security</h2>
+
+        <p>
+            Add Two-Factor Authentication to provide
+            an additional layer of account protection.
+        </p>
+
+        <a href="{{ url_for('enable_2fa') }}"
+           class="btn">
+            Enable 2FA
+        </a>
+
+    </div>
+
+    {% endif %}
+
+
+    <div class="security-grid">
+
+        <div>
+
+            <h3>🔐 Password Protection</h3>
+
+            <p>
+                Your password is never stored as plain text.
+                bcrypt is used to create a secure password hash.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h3>🛡️ SQL Protection</h3>
+
+            <p>
+                Database queries use parameters instead of
+                directly inserting user input into SQL commands.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h3>⏱️ Session Security</h3>
+
+            <p>
+                Authentication is maintained using server-side
+                Flask sessions.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="auth-card">
+
+    <div class="lock">
+        🔑
+    </div>
+
+    <h2>Two-Factor Verification</h2>
+
+    <p class="subtitle">
+        Enter the 6-digit code from your authenticator application.
+    </p>
+
+
+    <form method="POST">
+
+        <label>
+            Authentication Code
+        </label>
+
+        <input
+            type="text"
+            name="otp"
+            maxlength="6"
+            pattern="[0-9]{6}"
+            placeholder="123456"
+            required
+            autofocus
+        >
+
+
+        <button type="submit"
+                class="btn full">
+            Verify
+        </button>
+
+    </form>
+
+
+    <p class="bottom-text">
+
+        <a href="{{ url_for('login') }}">
+            Back to Login
+        </a>
+
+    </p>
+
+</div>
+
+{% endblock %}
