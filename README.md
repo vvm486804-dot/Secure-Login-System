@@ -43,3 +43,42 @@ secure-login-system/
 └── static/
     ├── style.css
     └── script.js
+
+
+🚀 How to Run
+
+1. Install dependencies
+
+pip install -r requirements.txt
+
+2. Run the application
+
+python app.py
+
+3. Open in browser
+
+http://127.0.0.1:5000
+
+🔒 Security
+Passwords are securely stored using bcrypt hashing.
+SQL queries use parameterized statements.
+User input is validated on both client and server sides.
+Flask sessions are used for authentication.
+Optional TOTP-based 2FA provides additional security.
+📋 Requirements
+ User Registration
+ User Login
+ Hashed Passwords
+ Input Validation
+ SQL Injection Protection
+ Session Management
+ Logout
+ Optional 2FA
+
+📄 License
+
+This project is developed for educational and academic purposes.
+
+
+**Important:** Copy everything from `# **🔐 Secure Login System**` to the end and paste it directly into your GitHub `README.md`. The project structure will appear correctly as a folder tree.
+
